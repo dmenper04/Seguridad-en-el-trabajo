@@ -1,41 +1,42 @@
 ---
 layout: default
-title: Seguridad en el Trabajo Informática
+title: Seguridad en el Trabajo Informático
 ---
 
-<div align="center">
-  <img src="https://images.unsplash.com/photo-1586772002130-b0f3daa6288b?q=80&w=800" alt="Oficina Segura" style="border-radius: 15px; width: 100%;">
-  <p><i>Un análisis colaborativo sobre la salud en la era digital.</i></p>
+## 📋 Presentación del Proyecto
+
+<div style="overflow: hidden;">
+  <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=300" align="right" style="margin-left: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 250px;" alt="Tecnología y Seguridad">
+  
+  <p>Este repositorio ha sido creado para abordar de manera integral los <b>Riesgos Laborales</b> y la <b>Prevención</b> en el sector de la informática. En un mundo cada vez más digitalizado, la salud del trabajador IT es fundamental para la sostenibilidad y productividad de las empresas.</p>
+  
+  <p>A través de esta documentación técnica, analizamos factores críticos como la ergonomía, el bienestar mental y la fatiga visual, proporcionando soluciones prácticas basadas en normativas vigentes.</p>
 </div>
 
-## 1. Introducción
-Este proyecto aborda los **Riesgos Laborales** y la **Prevención** desde un enfoque técnico e informático. Buscamos identificar cómo el entorno de desarrollo y oficina afecta a la salud física y mental de los trabajadores IT.
+---
+
+### 🗂️ Navegación por Apartados
+
+<div style="display: flex; justify-content: space-between; gap: 20px; margin-top: 20px;">
+  <div style="flex: 1; background: #f0f4f8; padding: 15px; border-radius: 8px; border-left: 5px solid #1a2a6c;">
+    <h4>⚠️ <a href="riesgos.html" style="text-decoration: none; color: #1a2a6c;">Riesgos Laborales</a></h4>
+    <p style="font-size: 0.9em;">Identificación de peligros físicos y psicológicos específicos.</p>
+  </div>
+  <div style="flex: 1; background: #f0f4f8; padding: 15px; border-radius: 8px; border-left: 5px solid #fdbb2d;">
+    <h4>🛡️ <a href="prevencion.html" style="text-decoration: none; color: #1a2a6c;">Prevención</a></h4>
+    <p style="font-size: 0.9em;">Medidas correctivas y guías de higiene postural.</p>
+  </div>
+</div>
 
 ---
 
-## 📂 Contenidos Principales
+### 👥 Equipo Colaborativo
+El trabajo ha sido desarrollado íntegramente por los siguientes autores:
 
-<table width="100%">
-  <tr>
-    <td><b>Apartado</b></td>
-    <td><b>Descripción</b></td>
-    <td><b>Acceso</b></td>
-  </tr>
-  <tr>
-    <td>⚠️ Riesgos</td>
-    <td>Análisis de fatiga visual y ergonomía.</td>
-    <td><a href="riesgos.html">Ver más</a></td>
-  </tr>
-  <tr>
-    <td>🛡️ Prevención</td>
-    <td>Medidas de higiene postural y pausas.</td>
-    <td><a href="prevencion.html">Ver más</a></td>
-  </tr>
-</table>
+* **Pablo Segura** * **Daniel Mendoza**
+* **Felix Zambrano**
 
 ---
-
-## 👥 Autores
-* **Pablo Segura** <span class="badge">Colaborador</span>
-* **Daniel Mendoza** <span class="badge">Colaborador</span>
-* **Felix Zambrano** <span class="badge">Colaborador</span>
+<p align="center">
+  <small>Proyecto bajo licencia abierta - GitHub 2026</small>
+</p>
