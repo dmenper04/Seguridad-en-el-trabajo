@@ -28,9 +28,8 @@ El presente trabajo ha sido realizado de forma colaborativa por:
 ## 4. Resultado y Documentación
 Puedes acceder a la versión web del proyecto y a todos sus recursos en el siguiente enlace:
 
-👉 **[Ver proyecto en GitHub Pages](https://tu-usuario.github.io/seguridad-trabajo-informatica/)**
+👉 **[Ver proyecto en GitHub Pages](https://dmenper04.io/Seguridad-en-el-trabajo/)**
 
-*(Recuerda sustituir "tu-usuario" por el nombre de tu cuenta de GitHub en el enlace superior)*
 
 ---
 
