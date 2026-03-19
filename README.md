@@ -28,7 +28,7 @@ El presente trabajo ha sido realizado de forma colaborativa por:
 ## 4. Resultado y Documentación
 Puedes acceder a la versión web del proyecto y a todos sus recursos en el siguiente enlace:
 
-👉 **[Ver proyecto en GitHub Pages](https://dmenper04.io/Seguridad-en-el-trabajo/)**
+👉 **[Ver proyecto en GitHub Pages](https://dmenper04.github.io/Seguridad-en-el-trabajo/)**
 
 
 ---
