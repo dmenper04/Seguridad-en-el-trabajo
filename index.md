@@ -1,54 +1,41 @@
-<div align="center">
-
-# 📑 Índice General de Contenidos
-### Proyecto: seguridad-trabajo-informática
-
 ---
-
-<p>Este índice central permite la navegación por los diferentes módulos: Riesgos laborales y prevención de riesgos desde un punto de vista informático.</p>
-
-</div>
-
----
-
-## 📂 Apartados del Trabajo
-
-| Fase | Contenido Técnico | Enlace |
-| :--- | :--- | :---: |
-| **01** | **Portada y Presentación del Proyecto** | [Ir a Portada](README.md) |
-| **02** | **Riesgos Laborales en Informática** | [Ver Riesgos](docs/riesgos.md) |
-| **03** | **Prevención de Riesgos en Informática** | [Ver Prevención](docs/prevencion.md) |
-| **04** | **Créditos y Equipo** | [Ver Autores](#-equipo-de-trabajo) |
-
----
-
-## 👥 Equipo de Trabajo
-El desarrollo y la investigación de este proyecto ha sido realizado por:
-
-> 🔹 **Pablo Segura** > 🔹 **Daniel Mendoza** > 🔹 **Felix Zambrano**
-
----
-
-## 🛠️ Metodología y Herramientas
-* **Lenguajes:** Markdown y HTML para la maquetación profesional.
-* **Plataforma:** GitHub Pages para el despliegue de la documentación técnica.
-* **Fuentes:** Basado en la Ley de Prevención de Riesgos Laborales y guías técnicas del INSST.
-
----
-
-## 🔗 Referencias y Documentación
-* [Normativa de Seguridad y Salud - INSST](https://www.insst.es)
-* [Guía de Ergonomía para el puesto de trabajo](https://www.insst.es/materias/riesgos/riesgos-ergonomicos)
-
+layout: default
+title: Seguridad en el Trabajo Informática
 ---
 
 <div align="center">
-
-[⬅️ Volver al README](README.md)
-
-**2026 - Seguridad en el Trabajo Informático**
+  <img src="https://images.unsplash.com/photo-1586772002130-b0f3daa6288b?q=80&w=800" alt="Oficina Segura" style="border-radius: 15px; width: 100%;">
+  <p><i>Un análisis colaborativo sobre la salud en la era digital.</i></p>
 </div>
 
-[⬅️ Volver a la Portada](README.md) | [Siguiente Apartado: Riesgos ➡️](docs/riesgos.md)
+## 1. Introducción
+Este proyecto aborda los **Riesgos Laborales** y la **Prevención** desde un enfoque técnico e informático. Buscamos identificar cómo el entorno de desarrollo y oficina afecta a la salud física y mental de los trabajadores IT.
 
-</div>
+---
+
+## 📂 Contenidos Principales
+
+<table width="100%">
+  <tr>
+    <td><b>Apartado</b></td>
+    <td><b>Descripción</b></td>
+    <td><b>Acceso</b></td>
+  </tr>
+  <tr>
+    <td>⚠️ Riesgos</td>
+    <td>Análisis de fatiga visual y ergonomía.</td>
+    <td><a href="riesgos.html">Ver más</a></td>
+  </tr>
+  <tr>
+    <td>🛡️ Prevención</td>
+    <td>Medidas de higiene postural y pausas.</td>
+    <td><a href="prevencion.html">Ver más</a></td>
+  </tr>
+</table>
+
+---
+
+## 👥 Autores
+* **Pablo Segura** <span class="badge">Colaborador</span>
+* **Daniel Mendoza** <span class="badge">Colaborador</span>
+* **Felix Zambrano** <span class="badge">Colaborador</span>
