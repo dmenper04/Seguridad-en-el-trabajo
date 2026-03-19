@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <style>
+        body { font-family: 'Helvetica', Arial, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: auto; padding: 40px; background-color: #fcfcfc; }
+        nav { background: #1a2a6c; padding: 15px 30px; border-radius: 50px; margin-bottom: 40px; display: flex; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 1.1em; }
+        nav a:hover { color: #fdbb2d; }
+        h1 { color: #1a2a6c; text-align: center; border-bottom: 3px solid #fdbb2d; padding-bottom: 15px; }
+        .content-box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .footer { text-align: center; margin-top: 60px; padding: 20px; border-top: 1px solid #eee; font-size: 0.9em; color: #666; }
+        .badge { background: #fdbb2d; color: #1a2a6c; padding: 5px 12px; border-radius: 20px; font-weight: bold; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.md">Iniciointro</a>
+    <a href="riesgos.md">Riesgos-laborales</a>
+    <a href="prevencion.md">Prevención-riesgos-imformatico</a>
+</nav>
+
+<div class="content-box">
+    {{ content }}
+</div>
+
+<div class="footer">
+    <p>Proyecto Colaborativo: <b>Pablo Segura | Daniel Mendoza | Felix Zambrano</b></p>
+    <p>Seguridad en el Trabajo Informático - 2026</p>
+</div>
+
+</body>
+</html>
