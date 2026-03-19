@@ -1,39 +1,21 @@
-# seguridad-trabajo-informática
+# 🛡️ Seguridad en el Trabajo Informática
 
-## 1. Introducción
-Este proyecto tiene como objetivo analizar la **seguridad y salud en el trabajo** dentro del ámbito informático. Se centra en la identificación de los peligros derivados del uso de equipos tecnológicos y las medidas necesarias para garantizar un entorno laboral seguro y eficiente.
+Este es un proyecto colaborativo enfocado en la salud y prevención en entornos tecnológicos.
 
----
+### 🌐 Ver Resultado con Menú Lateral
+Para una experiencia de lectura profesional con **índice de navegación a la izquierda**, accede al siguiente enlace:
 
-## 2. Apartados del Trabajo
-
-El desarrollo del proyecto se divide en los siguientes puntos clave:
-
-* **Riesgos laborales desde un punto de vista informático:** Análisis de fatiga visual, trastornos musculoesqueléticos y carga mental.
-* **Prevención de riesgos desde un punto de vista informático:** Medidas preventivas, diseño ergonómico del puesto y buenas prácticas.
+👉 **[PÁGINA PRINCIPAL DEL PROYECTO](https://tu-usuario.github.io/seguridad-trabajo-informatica/)**
 
 ---
 
-## 3. Autores
-El presente trabajo ha sido realizado de forma colaborativa por:
+## 📋 Resumen del Trabajo
+Investigación técnica sobre los riesgos ergonómicos, visuales y psicosociales en el sector IT.
 
-| Nombre |
-| :--- |
-| Pablo Segura |
-| Daniel Mendoza |
-| Felix Zambrano |
-
----
-
-## 4. Resultado y Documentación
-Puedes acceder a la versión web del proyecto y a todos sus recursos en el siguiente enlace:
-
-👉 **[Ver proyecto en GitHub Pages](https://dmenper04.github.io/Seguridad-en-el-trabajo/)**
-
+### 👥 Equipo
+* **Pablo Segura**
+* **Daniel Mendoza**
+* **Felix Zambrano**
 
 ---
-
-## 5. Referencias y Enlaces
-* **Fuentes consultadas:** Instituto Nacional de Seguridad y Salud en el Trabajo (INSST).
-* **Herramientas:** Uso de ChatGPT como asistente de redacción y estructuración.
-* **Imágenes:** Incluidas en el despliegue final para ilustrar posturas y entornos.
+*Desarrollado con Markdown, HTML y Jekyll Layouts.*
