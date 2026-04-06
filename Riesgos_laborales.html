@@ -4,7 +4,6 @@ title: Prevención de Riesgos Laborales
 ---
 
 <style>
-  /* --- ESTILOS DE BASE (BLANCO Y NEGRO MODERNO, MANTENIDOS) --- */
   
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -58,7 +57,7 @@ title: Prevención de Riesgos Laborales
     box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.05);
   }
 
-  /* --- ESTILOS DE CONCLUSIÓN (NUEVO FORMATO "BENTO", MANTENIDOS) --- */
+ 
   .card-bento {
     background-color: #000000;
     color: #ffffff;
@@ -92,7 +91,7 @@ title: Prevención de Riesgos Laborales
     font-size: 1.2em;
   }
 
-  /* --- NAVEGACIÓN (MINIMALISTA, MANTENIDOS) --- */
+ 
   .navegacion-minimal {
     display: flex;
     justify-content: space-between;
@@ -110,18 +109,16 @@ title: Prevención de Riesgos Laborales
     font-size: 0.9em;
   }
 
-  /* --- NUEVO FORMATO DE PRESENTACIÓN ORIGINAL: ACORDEÓN DESPLEGABLE --- */
-
-  /* Contenedor principal del acordeón */
+ 
   .contenedor-acordeon {
     max-width: 800px;
     margin: 40px auto;
   }
 
-  /* Botón del acordeón (el título que se clica) */
+  
   .acordeon-item {
-    background-color: #000000; /* FONDO NEGRO */
-    color: #ffffff; /* TEXTO BLANCO */
+    background-color: #000000; 
+    color: #ffffff; 
     cursor: pointer;
     padding: 20px 30px;
     width: 100%;
@@ -132,7 +129,7 @@ title: Prevención de Riesgos Laborales
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 2px solid #ffffff; /* Separador blanco */
+    border-bottom: 2px solid #ffffff; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,59 +138,58 @@ title: Prevención de Riesgos Laborales
 
   /* Efecto hover en el botón */
   .acordeon-item:hover, .acordeon-item.active {
-    background-color: #333333; /* Un gris oscuro para destacar */
+    background-color: #333333;
   }
 
-  /* Icono de "+" o "-" a la derecha */
+  
   .acordeon-item:after {
-    content: '\002B'; /* Símbolo '+' */
+    content: '\002B'; 
     font-size: 1.5em;
     font-weight: bold;
   }
 
   .acordeon-item.active:after {
-    content: "\2212"; /* Símbolo '-' */
-  }
+    content: "\2212"; 
 
-  /* Panel oculto (el contenido) */
+ 
   .panel-acordeon {
     padding: 0 30px;
-    background-color: #000000; /* FONDO NEGRO */
-    color: #ffffff; /* TEXTO BLANCO */
+    background-color: #000000; 
+    color: #ffffff; 
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Animación suave */
-    border-bottom: 2px solid #ffffff; /* Separador blanco inferior */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
+    border-bottom: 2px solid #ffffff; 
   }
 
-  /* Panel abierto */
+  
   .panel-acordeon.open {
     padding: 30px;
   }
 
-  /* Contenedor de texto del panel */
+  
   .panel-acordeon .contenido-texto {
     font-size: 1em;
     margin-bottom: 20px;
   }
 
   .panel-acordeon p {
-    color: #f0f0f0; /* Texto blanco ligeramente gris */
+    color: #f0f0f0; 
   }
 
-  /* Estilo de la IMAGEN del panel (forma cúbica, abajo) */
+ 
   .panel-acordeon img {
     width: 100%;
-    max-width: 500px; /* Tamaño máximo para que no sea gigante */
+    max-width: 500px; 
     height: 250px;
     object-fit: cover;
     display: block;
     margin: 20px auto 0 auto;
-    border: 4px solid #ffffff; /* Marco blanco fino */
+    border: 4px solid #ffffff;
     box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.1);
   }
 
-  /* Responsividad para móviles */
+ 
   @media (max-width: 900px) {
     .cabecera-minimal h1 {
       font-size: 2em;
@@ -252,17 +248,17 @@ title: Prevención de Riesgos Laborales
 
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
-        // Alterna la clase 'active' en el botón para cambiar el icono (+/-)
+      
         this.classList.toggle("active");
-        // Alterna la clase 'open' en el panel siguiente para abrirlo/cerrarlo
+       
         var panel = this.nextElementSibling;
         panel.classList.toggle("open");
         
-        // Animación suave de apertura ajustando el max-height
+       
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
-          // panel.scrollHeight es la altura real del contenido interno
+         
           panel.style.maxHeight = panel.scrollHeight + "px";
         } 
       });
