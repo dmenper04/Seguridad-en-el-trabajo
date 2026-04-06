@@ -1,1 +1,266 @@
+---
+layout: default
+title: Prevención de Riesgos Laborales
+---
 
+<style>
+  /* --- CAMBIO RADICAL DE DISEÑO (BLANCO Y NEGRO MODERNO) --- */
+  
+  /* Fondo general BLANCO */
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Tipografía más moderna y limpia */
+    color: #1a1a1a; /* Texto principal casi negro */
+    line-height: 1.8;
+    background-color: #ffffff; /* FONDO BLANCO */
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* Títulos principales */
+  h2 {
+    color: #000000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #000000; /* Línea negra gruesa */
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  /* Párrafos generales */
+  p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+
+  /* --- CABECERA ESTILO "MINIMALISTA NEGRA" --- */
+  .cabecera-minimal {
+    text-align: center;
+    padding: 40px;
+    border-radius: 0; /* Sin bordes redondeados, más cuadrado */
+    background-color: #000000; /* FONDO NEGRO */
+    color: #ffffff; /* TEXTO BLANCO */
+    margin: 20px auto;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1); /* Sombra cuadrada y dura */
+  }
+
+  .cabecera-minimal h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+
+  /* Imagen principal */
+  .img-principal {
+    display: block;
+    margin: 30px auto;
+    border-radius: 0; /* Totalmente cuadrada */
+    border: 10px solid #000000; /* Marco negro grueso */
+    max-width: 80%;
+    height: auto;
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  /* --- NUEVO DISEÑO DE "CUBOS INFORMATIVOS" (GRID MODERNO) --- */
+
+  /* Contenedor principal de los tres cubos (la cuadrícula) */
+  .contenedor-cubos-grid {
+    display: grid;
+    /* Crea 3 columnas iguales y automáticas */
+    grid-template-columns: repeat(3, 1fr);
+    /* Espacio entre los cubos */
+    gap: 30px;
+    margin: 40px 0;
+  }
+
+  /* Estilo individual de cada CUBO (FORMA DE PRESENTACIÓN) */
+  .cubo-riesgo {
+    background-color: #000000; /* FONDO NEGRO */
+    color: #ffffff; /* TEXTO BLANCO */
+    border-radius: 0; /* Totalmente cuadrado */
+    padding: 30px;
+    /* Sombra dura y cuadrada */
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.15);
+    /* Diseño flex interno para ordenar texto arriba y foto abajo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease; /* Efecto al pasar el ratón */
+  }
+
+  .cubo-riesgo:hover {
+    transform: translate(-5px, -5px); /* Se mueve ligeramente */
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Título del cubo */
+  .cubo-riesgo .card-title {
+    font-weight: 900;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff; /* Texto blanco */
+    border-bottom: 2px solid #ffffff; /* Línea blanca fina */
+    padding-bottom: 10px;
+  }
+
+  /* Contenedor de texto del cubo */
+  .cubo-riesgo .contenido-texto {
+    font-size: 1em;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Permite que el texto ocupe el espacio */
+  }
+
+  /* Estilo de la IMAGEN del cubo (FORMA CÚBICA ABAJO) */
+  .cubo-riesgo img {
+    width: 100%;
+    height: 180px; /* Tamaño fijo para la cuadrícula */
+    object-fit: cover; /* Recorta la imagen para que llene el espacio */
+    border-radius: 0; /* Totalmente cuadrada */
+    margin-top: auto; /* Se asegura de ir al fondo del cubo */
+    border: 4px solid #ffffff; /* Marco blanco fino alrededor de la imagen */
+  }
+
+  /* --- ESTILOS DE CONCLUSIÓN (NUEVO FORMATO "BENTO") --- */
+  .card-bento {
+    background-color: #000000; /* FONDO NEGRO */
+    color: #ffffff; /* TEXTO BLANCO */
+    padding: 40px;
+    border-radius: 0;
+    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 2px solid #ffffff; /* Borde blanco fino */
+  }
+
+  .card-bento .card-title {
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  .card-bento p {
+    color: #f0f0f0; /* Texto blanco ligeramente gris */
+    margin-bottom: 20px;
+  }
+
+  .cita-final {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid #ffffff;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2em;
+  }
+
+  /* --- NAVEGACIÓN (MINIMALISTA) --- */
+  .navegacion-minimal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 4px solid #000000;
+  }
+
+  .navegacion-minimal a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+
+  .navegacion-minimal a:hover {
+    color: #555555;
+  }
+
+  /* Responsividad para móviles */
+  @media (max-width: 900px) {
+    .contenedor-cubos-grid {
+      grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    .cabecera-minimal h1 {
+      font-size: 2em;
+    }
+  }
+</style>
+
+<div>
+
+  <div class="cabecera-minimal">
+    <h1>Prevención de Riesgos Laborales</h1>
+  </div>
+
+  <h2>¿Qué son los riesgos laborales?</h2>
+
+  <p>
+    La <strong>seguridad y salud en el trabajo</strong> es un derecho fundamental que busca proteger la integridad física y mental de los trabajadores. Los riesgos laborales son aquellas situaciones o factores presentes en el entorno de trabajo que pueden causar accidentes, enfermedades o daños a la salud. Mitigar estos riesgos es vital no solo para el bienestar individual, sino para la sostenibilidad de las empresas y la sociedad. Un entorno seguro previene crisis sanitarias y productivas, garantizando un desarrollo económico y social hipoteque el futuro de las generaciones venideras.
+  </p>
+
+  <img src="https://images.unsplash.com/photo-1590402421685-ae2211d74a01?q=80&w=1000&auto=format&fit=crop" class="img-principal" alt="Equipo de protección individual obligatorio">
+
+  <h2>Clasificación de Riesgos Principales</h2>
+
+  <div class="contenedor-cubos-grid">
+
+    <div class="cubo-riesgo">
+      <div class="card-title">Riesgos Físicos</div>
+      <div class="contenido-texto">
+        <p>Son factores ambientales que pueden afectar la salud, como el ruido excesivo, la iluminación inadecuada, las radiaciones o las temperaturas extremas.</p>
+        <p>Un ambiente ruidoso puede causar sordera profesional.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=600&auto=format&fit=crop" alt="Trabajador expuesto a ruido de maquinaria pesada">
+    </div>
+
+    <div class="cubo-riesgo">
+      <div class="card-title">Químicos y Biológicos</div>
+      <div class="contenido-texto">
+        <p>Provienen de la exposición a sustancias tóxicas (humos, gases, polvos) o agentes biológicos (virus, bacterias, hongos) que pueden penetrar en el organismo.</p>
+        <p>La inhalación de polvos químicos puede causar graves enfermedades respiratorias.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1615482329583-b9b50b73c473?q=80&w=600&auto=format&fit=crop" alt="Científico manipulando muestras biológicas con protección">
+    </div>
+
+    <div class="cubo-riesgo">
+      <div class="card-title">Psicosociales y Ergonómicos</div>
+      <div class="contenido-texto">
+        <p>Se refieren a la organización del trabajo y la relación hombre-máquina. Incluyen el estrés, la fatiga mental, el acoso laboral o las malas posturas.</p>
+        <p>Las posturas forzadas y movimientos repetitivos causan trastornos musculoesqueléticos.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1549213713-52caee1dffd9?q=80&w=600&auto=format&fit=crop" alt="Trabajador de oficina con mala postura y estrés">
+    </div>
+
+  </div> <h2>Conclusión</h2>
+
+  <div class="card-bento">
+    <div class="card-title" style="text-align: center;">La prevención es una inversión, no un coste</div>
+    
+    <p>La <strong>prevención de riesgos laborales</strong> es un pilar fundamental para el desarrollo sostenible y ético de cualquier sociedad moderna. Su avance representa una protección directa de los sistemas que sostienen la vida productiva y el bienestar social. Reducir su impacto requiere mucho más que simples cumplimientos normativos; exige una <strong>transformación profunda</strong> en nuestra cultura preventiva y un cambio radical en los hábitos organizativos que hemos normalizado durante décadas.</p>
+
+    <p>Más allá de las grandes regulaciones gubernamentales o los protocolos empresariales, la verdadera clave reside en la transición urgente hacia una <strong>cultura de la seguridad</strong>. Este modelo busca que el concepto de "accidente accidental" desaparezca por completo, transformando cada cuasi-accidente en un nuevo recurso de aprendizaje para la mejora continua.</p>
+
+    <p>Adoptar una mentalidad de <strong>respeto y ética</strong> hacia la salud de los trabajadores es el primer paso crítico para revertir el daño potencial causado. La tecnología, si se implementa de forma responsable, puede ser nuestra mejor aliada: desde sistemas avanzados de monitoreo de la salud hasta innovaciones en robots colaborativos que asuman tareas peligrosas.</p>
+
+    <p>En última instancia, el éxito de la lucha contra los riesgos laborales dependerá de nuestra capacidad para actuar hoy. Cada pequeña acción contribuye a un efecto dominó positivo. No estamos simplemente "protegiendo vidas", estamos asegurando la viabilidad de la civilización humana y protegiendo el legado productivo para las generaciones que aún no han nacido.</p>
+
+    <div class="cita-final">
+      "Proteger la salud en el trabajo no es solo una opción, es una necesidad para el futuro."
+    </div>
+  </div>
+
+  <div class="navegacion-minimal">
+    <a href="index.html">🏠 Volver al Inicio</a>
+    <a href="Manuel_residuos.html"> Gestión preventiva ➜</a>
+  </div>
+
+</div>
