@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prevención de Riesgos | Seguridad Laboral</title>
-<style>
+    <style>
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; display: flex; height: 100vh; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
         
-        /* Indice */
-        .sidebar { width: 250px; background-color: #2c3e50; color: white; padding: 20px; position: fixed; height: 100%; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
-        .sidebar h2 { font-size: 1.2em; border-bottom: 1px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; color: #3498db; }
-        .sidebar a { display: block; color: #bdc3c7; text-decoration: none; padding: 12px 15px; border-radius: 6px; transition: all 0.3s; margin-bottom: 8px; border-left: 3px solid transparent; }
-        .sidebar a:hover { background-color: #34495e; color: #3498db; border-left-color: #3498db; }
-        .sidebar a.active { background-color: #3498db; color: white; border-left-color: #2980b9; }
+        /* Barra Lateral Izquierda */
+        .sidebar { width: 250px; background-color: #172a3a; color: #cbd6e2; padding: 24px 20px; position: fixed; height: 100%; box-shadow: 2px 0 10px rgba(0,0,0,0.18); }
+        .sidebar h2 { font-size: 0.95em; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 22px; color: #50d0ff; }
+        .sidebar a { display: block; color: #d7e4f5; text-decoration: none; padding: 14px 16px; border-radius: 12px; font-weight: 500; margin-bottom: 10px; background-color: transparent; font-size: 0.98em; }
+        .sidebar a:hover { background-color: rgba(255,255,255,0.06); color: #edf6ff; }
+        .sidebar a.active { background-color: #50d0ff; color: #0f2b3d; font-weight: 700; }
 
         /* Contenido Principal */
         .main-content { margin-left: 280px; padding: 30px 50px; flex-grow: 1; width: 100%; overflow-y: auto; }
@@ -41,16 +41,18 @@
 <body>
 
 <div class="sidebar">
-    <h2>ÍNDICE</h2>
-    <a href="index.html">🏠 Inicio</a>
-    <a href="Riesgos_laborales.html">Riesgos laborales</a>
-    <a href="prevencion.html" class="active">🛡️ Prevención</a>
-    <hr style="border: 0; border-top: 1px solid #34495e; margin: 20px 0;">
+    <h2>NAVEGACIÓN TÉCNICA</h2>
+    <a href="index.html" class="active">Página Principal</a>
+    <a href="riesgos.html">Riesgos laborales</a>
+    <a href="prevencion.html">Prevención de riesgos</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Repositorio GitHub</a>
+    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 22px 0;">
     <p style="font-size: 0.8em; color: #7f8c8d;">Autores:</p>
     <span style="font-size: 0.85em; display: block;">• Pablo Segura</span>
     <span style="font-size: 0.85em; display: block;">• Daniel Mendoza</span>
     <span style="font-size: 0.85em; display: block;">• Felix Zambrano</span>
 </div>
+
 <div class="main-content">
     <div class="card">
         <h1>Prevención de Riesgos en el Trabajo Informático</h1>
@@ -71,6 +73,7 @@
             <li>Ajusta el brillo y contraste para reducir el esfuerzo visual.</li>
             <li>Realiza exámenes oftalmológicos regulares.</li>
         </ul>
+        
         <h2>Riesgos Psicológicos</h2>
         <p>El estrés y la sobrecarga mental son comunes en trabajos informáticos.</p>
         <ul>
