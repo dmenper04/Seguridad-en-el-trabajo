@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad Laboral - Inicio</title>
+    <style>
+        :root { --primary: #1e293b; --accent: #38bdf8; --bg: #f1f5f9; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; background: var(--bg); color: #334155; }
+        
+        /* Menú Lateral */
+        nav { width: 280px; background: var(--primary); color: white; height: 100vh; position: fixed; padding: 30px 20px; box-sizing: border-box; }
+        nav h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); border-bottom: 1px solid #334155; padding-bottom: 15px; }
+        nav a { color: #cbd5e1; text-decoration: none; display: block; padding: 12px; border-radius: 6px; margin: 5px 0; transition: 0.3s; }
+        nav a:hover { background: #334155; color: white; transform: translateX(5px); }
+        nav a.active { background: var(--accent); color: var(--primary); font-weight: bold; }
+
+        /* Contenido */
+        main { margin-left: 280px; padding: 60px; width: 100%; max-width: 1000px; }
+        .hero { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-top: 8px solid var(--accent); }
+        h1 { font-size: 2.5rem; color: var(--primary); margin-top: 0; }
+        
+        .grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .box { padding: 25px; border-radius: 10px; color: white; }
+        .box-blue { background: #0284c7; }
+        .box-dark { background: #334155; }
+        
+        footer { margin-top: 50px; font-size: 0.85rem; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h2>Navegación Técnica</h2>
+    <a href="index.html" class="active">Página Principal</a>
+    <a href="riesgos_laborales.html">Riesgos y Prevención</a>
+    <a href="https://github.com/dmenper04/Seguridad-en-el-trabajo">Repositorio GitHub</a>
+</nav>
+
+<main>
+    <div class="hero">
+        <h1>Seguridad en el Trabajo</h1>
+        <p style="font-size: 1.2rem; line-height: 1.6;">Este proyecto analiza de forma exhaustiva los protocolos de salud y seguridad laboral necesarios en el ámbito informático moderno, desde la ergonomía física hasta la salud mental del desarrollador.</p>
+        
+        <div class="grid-info">
+            <div class="box box-blue">
+                <h3 style="margin-top:0">Objetivo del Trabajo</h3>
+                <p>Identificar y mitigar los riesgos derivados del uso prolongado de equipos informáticos y entornos de servidores.</p>
+            </div>
+            <div class="box box-dark">
+                <h3 style="margin-top:0">Equipo de Trabajo</h3>
+                <p>• Pablo Segura<br>• Felix Zambrano<br>• Daniel Mendoza</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Seguridad en el Trabajo - Documentación Técnica Académica.
+    </footer>
+</main>
+
+</body>
+</html>
