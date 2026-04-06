@@ -3,52 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Seguridad Laboral</title>
+    <title>{{ page.title }} | Prevención IT</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; display: flex; height: 100vh; background-color: #f4f7f6; }
-        
-        /* Barra Lateral Izquierda */
-        .sidebar { width: 250px; background-color: #2c3e50; color: white; padding: 20px; position: fixed; height: 100%; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
-        .sidebar h2 { font-size: 1.2em; border-bottom: 1px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; color: #3498db; }
-        .sidebar a { display: block; color: #bdc3c7; text-decoration: none; padding: 10px; border-radius: 4px; transition: 0.3s; margin-bottom: 5px; }
-        .sidebar a:hover { background-color: #34495e; color: white; }
-        .sidebar a.active { background-color: #3498db; color: white; }
+        :root {
+            --sidebar-bg: #1e293b;
+            --sidebar-hover: #334155;
+            --accent: #0ea5e9;
+            --text-main: #334155;
+            --bg-body: #f8fafc;
+        }
 
-        /* Contenido Principal */
-        .main-content { margin-left: 280px; padding: 40px; flex-grow: 1; max-width: 900px; }
-        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        
-        h1 { color: #2c3e50; margin-top: 0; }
-        .author-tag { background: #e8f4fd; color: #2980b9; padding: 5px 12px; border-radius: 15px; font-size: 0.85em; font-weight: bold; margin-right: 5px; }
-        img.side-img { float: right; margin-left: 20px; border-radius: 10px; width: 280px; transition: transform 0.3s; }
-        img.side-img:hover { transform: scale(1.02); }
-        
-        .footer { margin-top: 40px; font-size: 0.8em; color: #95a5a6; border-top: 1px solid #eee; padding-top: 20px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+        }
+
+        /* Índice Lateral */
+        nav {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: #f1f5f9;
+            height: 100vh;
+            position: fixed;
+            padding: 2rem 1.5rem;
+            box-sizing: border-box;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+        }
+
+        nav h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            border-bottom: 1px solid #334155;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--sidebar-hover);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Área de Contenido */
+        main {
+            margin-left: 280px;
+            padding: 3rem;
+            width: 100%;
+        }
+
+        .content-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.05);
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            nav { width: 100%; height: auto; position: relative; }
+            main { margin-left: 0; padding: 1.5rem; }
+            body { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <h2>ÍNDICE</h2>
-    <a href="index.html">🏠 Inicio</a>
-    <a href="riesgos.html">⚠️ Riesgos Laborales</a>
-    <a href="prevencion.html">🛡️ Prevención</a>
-    <hr style="border: 0; border-top: 1px solid #34495e; margin: 20px 0;">
-    <p style="font-size: 0.8em; color: #7f8c8d;">Autores:</p>
-    <span style="font-size: 0.85em; display: block;">• Pablo Segura</span>
-    <span style="font-size: 0.85em; display: block;">• Daniel Mendoza</span>
-    <span style="font-size: 0.85em; display: block;">• Felix Zambrano</span>
-</div>
+<nav>
+    <h2>Índice de Contenidos</h2>
+    <ul>
+        <li><a href="index.html">Página Principal</a></li>
+        <li><a href="#ergonomia">Riesgos laborales </a></li>
+        <li><a href="#visual">revención de riesgos</a></li>
+        <li><a href="https://github.com">Repositorio GitHub</a></li>
+    </ul>
+</nav>
 
-<div class="main-content">
-    <div class="card">
+<main>
+    <div class="content-card">
         {{ content }}
         
-        <div class="footer">
-            Proyecto: seguridad-trabajo-informática | 2026
-        </div>
+        <footer>
+            Proyecto elaborado por Segura, Zambrano y Mendoza. 
+            Información técnica sobre Seguridad Laboral 2026.
+        </footer>
     </div>
-</div>
+</main>
 
 </body>
 </html>
