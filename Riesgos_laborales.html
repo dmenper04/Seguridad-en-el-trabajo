@@ -1,52 +1,125 @@
-import React, { useState } from 'react';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página - Etiquetas Expandibles</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
 
-const AccordionComponent = () => {
-  // Estado para manejar qué etiqueta está expandida
-  const [activeIndex, setActiveIndex] = useState(null);
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
 
-  const data = [
-    { id: 1, title: "Etiqueta 1", content: "Contenido detallado de la etiqueta 1." },
-    { id: 2, title: "Etiqueta 2", content: "Contenido detallado de la etiqueta 2." },
-    { id: 3, title: "Etiqueta 3", content: "Contenido detallado de la etiqueta 3." },
-  ];
+        /* Estilo de las etiquetas (Acordeón) */
+        .acordeon-item {
+            background: #fff;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-  const toggleAccordion = (index) => {
-    // Si haces clic en la que ya está abierta, se cierra. Si no, abre la nueva.
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+        .acordeon-header {
+            width: 100%;
+            padding: 15px 20px;
+            background: #2c3e50;
+            color: white;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
 
-  return (
-    <div style={{ maxWidth: '500px', margin: '20px auto', fontFamily: 'sans-serif' }}>
-      {data.map((item, index) => (
-        <div key={item.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px' }}>
-          <button
-            onClick={() => toggleAccordion(index)}
-            style={{
-              width: '100%',
-              textAlign: 'left',
-              padding: '15px',
-              background: '#f4f4f4',
-              border: 'none',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              display: 'flex',
-              justifyContent: 'space-between'
-            }}
-          >
-            {item.title}
-            <span>{activeIndex === index ? '-' : '+'}</span>
-          </button>
-          
-          {/* Contenido condicional con transición simple */}
-          {activeIndex === index && (
-            <div style={{ padding: '15px', background: '#fff', color: '#555' }}>
-              {item.content}
-            </div>
-          )}
+        .acordeon-header:hover {
+            background: #34495e;
+        }
+
+        .acordeon-content {
+            max-height: 0; /* Cerrado por defecto */
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: #fff;
+            padding: 0 20px;
+        }
+
+        /* Clase que aplicaremos con JS para abrir */
+        .acordeon-item.active .acordeon-content {
+            max-height: 200px; /* Ajusta según el contenido */
+            padding: 15px 20px;
+        }
+
+        .acordeon-item.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .icon {
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Información</h1>
+
+    <div class="acordeon-item">
+        <button class="acordeon-header">
+            ¿Cómo funciona? <span class="icon">▼</span>
+        </button>
+        <div class="acordeon-content">
+            <p>Este es el contenido de la primera etiqueta. Ahora se expande correctamente al hacer clic.</p>
         </div>
-      ))}
     </div>
-  );
-};
 
-export default AccordionComponent;
+    <div class="acordeon-item">
+        <button class="acordeon-header">
+            Sobre el error 404 <span class="icon">▼</span>
+        </button>
+        <div class="acordeon-content">
+            <p>En GitHub Pages, si recargas en una sub-ruta, el servidor busca un archivo que no existe. Usar rutas simples o HashRouter evita esto.</p>
+        </div>
+    </div>
+
+    <div class="acordeon-item">
+        <button class="acordeon-header">
+            Instrucciones <span class="icon">▼</span>
+        </button>
+        <div class="acordeon-content">
+            <p>Simplemente copia este código en tu archivo index.html y súbelo a tu repo.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lógica para expandir y contraer
+    document.querySelectorAll('.acordeon-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const currentItem = button.parentElement;
+            
+            // Cerrar otros (opcional, si quieres que solo uno esté abierto)
+            document.querySelectorAll('.acordeon-item').forEach(item => {
+                if (item !== currentItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Alternar el actual
+            currentItem.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
