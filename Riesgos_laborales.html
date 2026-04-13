@@ -1,284 +1,52 @@
----
-layout: default
-title: Riesgos Laborales
----
+import React, { useState } from 'react';
 
-<style>
-  
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #1a1a1a;
-    line-height: 1.8;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 20px;
-  }
+const AccordionComponent = () => {
+  // Estado para manejar qué etiqueta está expandida
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  h2 {
-    color: #000000;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 4px solid #000000;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
+  const data = [
+    { id: 1, title: "Etiqueta 1", content: "Contenido detallado de la etiqueta 1." },
+    { id: 2, title: "Etiqueta 2", content: "Contenido detallado de la etiqueta 2." },
+    { id: 3, title: "Etiqueta 3", content: "Contenido detallado de la etiqueta 3." },
+  ];
 
-  p {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-  }
+  const toggleAccordion = (index) => {
+    // Si haces clic en la que ya está abierta, se cierra. Si no, abre la nueva.
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
-  .cabecera-minimal {
-    text-align: center;
-    padding: 40px;
-    background-color: #000000;
-    color: #ffffff;
-    margin: 20px auto;
-    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  .cabecera-minimal h1 {
-    margin: 0;
-    font-size: 3em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-
-  .img-principal {
-    display: block;
-    margin: 30px auto;
-    border: 10px solid #000000;
-    max-width: 80%;
-    height: auto;
-    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.05);
-  }
-
- 
-  .card-bento {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 40px;
-    border-radius: 0;
-    box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    border: 2px solid #ffffff;
-  }
-
-  .card-bento .card-title {
-    color: #ffffff;
-    font-size: 1.8em;
-    font-weight: 900;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-  }
-
-  .card-bento p {
-    color: #f0f0f0;
-  }
-
-  .cita-final {
-    margin-top: 30px;
-    padding: 20px;
-    border-top: 2px solid #ffffff;
-    font-style: italic;
-    font-weight: 700;
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.2em;
-  }
-
- 
-  .navegacion-minimal {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 4px solid #000000;
-  }
-
-  .navegacion-minimal a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9em;
-  }
-
- 
-  .contenedor-acordeon {
-    max-width: 800px;
-    margin: 40px auto;
-  }
-
-  
-  .acordeon-item {
-    background-color: #000000; 
-    color: #ffffff; 
-    cursor: pointer;
-    padding: 20px 30px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 1.3em;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #ffffff; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-  }
-
-  /* Efecto hover en el botón */
-  .acordeon-item:hover, .acordeon-item.active {
-    background-color: #333333;
-  }
-
-  
-  .acordeon-item:after {
-    content: '\002B'; 
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-
-  .acordeon-item.active:after {
-    content: "\2212"; 
-
- 
-  .panel-acordeon {
-    padding: 0 30px;
-    background-color: #000000; 
-    color: #ffffff; 
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out, padding 0.4s ease-out; 
-    border-bottom: 2px solid #ffffff; 
-  }
-
-  
-  .panel-acordeon.open {
-    padding: 30px;
-  }
-
-  
-  .panel-acordeon .contenido-texto {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-
-  .panel-acordeon p {
-    color: #f0f0f0; 
-  }
-
- 
-  .panel-acordeon img {
-    width: 100%;
-    max-width: 500px; 
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto 0 auto;
-    border: 4px solid #ffffff;
-    box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.1);
-  }
-
- 
-  @media (max-width: 900px) {
-    .cabecera-minimal h1 {
-      font-size: 2em;
-    }
-  }
-</style>
-
-<div>
-
-  <div class="cabecera-minimal">
-    <h1>Prevención de Riesgos Laborales</h1>
-  </div>
-
-  <h2>¿Qué son los riesgos laborales?</h2>
-
-  <p>
-    La <strong>seguridad y salud en el trabajo</strong> es un derecho fundamental que busca proteger la integridad física y mental de los trabajadores. Los riesgos laborales son aquellas situaciones o factores presentes en el entorno de trabajo que pueden causar accidentes, enfermedades o daños a la salud. Mitigar estos riesgos es vital no solo para el bienestar individual, sino para la sostenibilidad de las empresas y la sociedad. Un entorno seguro previene crisis sanitarias y productivas, garantizando un desarrollo económico y social que no hipoteque el futuro de las generaciones venideras.
-  </p>
-
-  <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800">
-
-  <h2>Clasificación de Riesgos Principales</h2>
-
-  <div class="contenedor-acordeon">
-
-    <button class="acordeon-item">Riesgos Físicos</button>
-    <div class="panel-acordeon">
-      <div class="contenido-texto">
-        <p>Son factores ambientales que pueden afectar la salud, como el ruido excesivo, la iluminación inadecuada, las radiaciones o las temperaturas extremas.</p>
-        <p>Un ambiente ruidoso puede causar sordera profesional.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=600&auto=format&fit=crop" alt="Trabajador expuesto a ruido de maquinaria pesada">
+  return (
+    <div style={{ maxWidth: '500px', margin: '20px auto', fontFamily: 'sans-serif' }}>
+      {data.map((item, index) => (
+        <div key={item.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px' }}>
+          <button
+            onClick={() => toggleAccordion(index)}
+            style={{
+              width: '100%',
+              textAlign: 'left',
+              padding: '15px',
+              background: '#f4f4f4',
+              border: 'none',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}
+          >
+            {item.title}
+            <span>{activeIndex === index ? '-' : '+'}</span>
+          </button>
+          
+          {/* Contenido condicional con transición simple */}
+          {activeIndex === index && (
+            <div style={{ padding: '15px', background: '#fff', color: '#555' }}>
+              {item.content}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
+  );
+};
 
-    <button class="acordeon-item">Químicos y Biológicos</button>
-    <div class="panel-acordeon">
-      <div class="contenido-texto">
-        <p>Provienen de la exposición a sustancias tóxicas (humos, gases, polvos) o agentes biológicos (virus, bacterias, hongos) que pueden penetrar en el organismo.</p>
-        <p>La inhalación de polvos químicos puede causar graves enfermedades respiratorias.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600">
-    </div>
-
-    <button class="acordeon-item">Psicosociales y Ergonómicos</button>
-    <div class="panel-acordeon">
-      <div class="contenido-texto">
-        <p>Se refieren a la organización del trabajo y la relación hombre-máquina. Incluyen el estrés, la fatiga mental, el acoso laboral o las malas posturas.</p>
-        <p>Las posturas forzadas y movimientos repetitivos causan trastornos musculoesqueléticos.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=600&auto=format&fit=crop" alt="Persona con estrés y fatiga en puesto de trabajo de oficina">
-    </div>
-
-  </div> <script>
-    var acc = document.getElementsByClassName("acordeon-item");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-      
-        this.classList.toggle("active");
-       
-        var panel = this.nextElementSibling;
-        panel.classList.toggle("open");
-        
-       
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-         
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      });
-    }
-  </script>
-
-  <h2>Conclusión</h2>
-
-  <div class="card-bento">
-    <div class="card-title" style="text-align: center;">La prevención es una inversión, no un coste</div>
-    
-    <p>La <strong>prevención de riesgos laborales</strong> es un pilar fundamental para el desarrollo sostenible y ético de cualquier sociedad moderna. Su avance representa una protección directa de los sistemas que sostienen la vida productiva y el bienestar social. Reducir su impacto requiere mucho más que simples cumplimientos normativos; exige una <strong>transformación profunda</strong> en nuestra cultura preventiva y un cambio radical en los hábitos organizativos que hemos normalizado durante décadas.</p>
-
-    <p>Más allá de las grandes regulaciones gubernamentales o los protocolos empresariales, la verdadera clave reside en la transición urgente hacia una <strong>cultura de la seguridad</strong>. Este modelo busca que el concepto de "accidente accidental" desaparezca por completo, transformando cada cuasi-accidente en un nuevo recurso de aprendizaje para la mejora continua.</p>
-
-    <div class="cita-final">
-      "Proteger la salud en el trabajo no es solo una opción, es una necesidad para el futuro."
-    </div>
-  </div>
-
-
-</div>
-</div>
+export default AccordionComponent;
