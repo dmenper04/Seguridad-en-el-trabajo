@@ -1,195 +1,183 @@
-
----
-layout: default
-title: Riesgos Laborales
----
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riesgos Laborales</title>
 
 <style>
 
+/* BASE */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #1a1a1a;
-  line-height: 1.8;
-  background-color: #ffffff;
+  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  display: flex;
+  height: 100vh;
+  background: #ffffff;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background-color: #000;
+  color: #fff;
+  padding: 24px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar h2 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.sidebar a:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* CONTENIDO */
+.main-content {
+  margin-left: 280px;
+  padding: 40px;
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  padding: 40px;
+  border: 4px solid #000;
+  box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
+}
+
+/* TITULOS */
+h1 {
+  font-size: 2.5em;
+  border-bottom: 4px solid #000;
 }
 
 h2 {
-  color: #000000;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 2px;
   margin-top: 40px;
-  margin-bottom: 20px;
-  border-bottom: 4px solid #000000;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-p {
-  margin-bottom: 20px;
-  font-size: 1.1em;
-}
-
-/* CABECERA */
-.cabecera-minimal {
-  text-align: center;
-  padding: 40px;
-  background-color: #000000;
-  color: #ffffff;
-  margin: 20px auto;
-  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-.cabecera-minimal h1 {
-  margin: 0;
-  font-size: 3em;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+  border-bottom: 3px solid #000;
 }
 
 /* IMAGEN */
-.img-principal {
-  display: block;
-  margin: 30px auto;
-  border: 10px solid #000000;
-  max-width: 80%;
-  height: auto;
-  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.05);
-}
-
-/* TARJETA FINAL */
-.card-bento {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 40px;
-  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  border: 2px solid #ffffff;
-}
-
-.card-bento .card-title {
-  font-size: 1.8em;
-  font-weight: 900;
-  margin-bottom: 25px;
-  text-transform: uppercase;
-}
-
-.cita-final {
-  margin-top: 30px;
-  padding: 20px;
-  border-top: 2px solid #ffffff;
-  font-style: italic;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* ACORDEÓN */
-.contenedor-acordeon {
-  max-width: 800px;
-  margin: 40px auto;
-}
-
-.acordeon-item {
-  background-color: #000000;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 20px 30px;
+.content-img {
   width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1.3em;
-  font-weight: 800;
-  text-transform: uppercase;
-  border-bottom: 2px solid #ffffff;
-  display: flex;
-  justify-content: space-between;
-  transition: background-color 0.3s;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+  border: 6px solid #000;
+  box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
 }
 
-.acordeon-item:hover, .acordeon-item.active {
-  background-color: #333333;
+/* ACORDEON */
+.acordeon-item {
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .acordeon-item:after {
   content: '+';
-  font-size: 1.5em;
+  float: right;
 }
 
 .acordeon-item.active:after {
   content: '-';
 }
 
-/* PANEL */
-.panel-acordeon {
-  padding: 0 30px;
-  background-color: #000000;
-  color: #ffffff;
+.panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.3s;
-  border-bottom: 2px solid #ffffff;
+  background: #000;
+  color: #fff;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-bottom: 2px solid #fff;
 }
 
-.panel-acordeon.open {
-  padding: 30px;
+.panel.open {
+  padding: 20px;
 }
 
-.panel-acordeon p {
-  color: #f0f0f0;
-}
-
-.panel-acordeon img {
-  width: 100%;
-  max-width: 500px;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-  margin: 20px auto;
-  border: 4px solid #ffffff;
-  box-shadow: 10px 10px 0px rgba(255,255,255,0.1);
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  border-top: 2px solid #000;
+  padding-top: 20px;
 }
 
 </style>
+</head>
 
-<div>
+<body>
 
-<div class="cabecera-minimal">
-  <h1>Prevención de Riesgos Laborales</h1>
+<div class="sidebar">
+  <h2>NAVEGACIÓN</h2>
+  <a href="index.html">Inicio</a>
+  <a href="Riesgos_laborales.html">Riesgos laborales</a>
+  <a href="Prevencion.html">Prevención</a>
 </div>
 
-<h2>¿Qué son los riesgos laborales?</h2>
+<div class="main-content">
+<div class="card">
+
+<h1>Riesgos Laborales</h1>
 
 <p>
-La <strong>seguridad y salud en el trabajo</strong> es un derecho fundamental que busca proteger la integridad física y mental de los trabajadores. Los riesgos laborales son aquellas situaciones o factores presentes en el entorno de trabajo que pueden causar accidentes, enfermedades o daños a la salud.
+Los riesgos laborales son aquellas situaciones que pueden provocar daños en la salud de los trabajadores. Identificarlos y prevenirlos es clave para garantizar un entorno seguro.
 </p>
 
-<img class="img-principal" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+<img class="content-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
 
-<h2>Clasificación de Riesgos Principales</h2>
-
-<div class="contenedor-acordeon">
+<h2>Tipos de Riesgos</h2>
 
 <button class="acordeon-item">Riesgos Físicos</button>
-<div class="panel-acordeon">
-  <p>Son factores ambientales como ruido, iluminación o temperaturas extremas.</p>
-  <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589">
+<div class="panel">
+  <p>Incluyen ruido, temperatura extrema o iluminación deficiente.</p>
+  <img class="content-img" src="https://images.unsplash.com/photo-1516937941344-00b4e0337589">
 </div>
 
-<button class="acordeon-item">Químicos y Biológicos</button>
-<div class="panel-acordeon">
-  <p>Exposición a sustancias tóxicas o virus.</p>
-  <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158">
+<button class="acordeon-item">Riesgos Químicos</button>
+<div class="panel">
+  <p>Exposición a sustancias peligrosas como gases o productos tóxicos.</p>
+  <img class="content-img" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158">
 </div>
 
-<button class="acordeon-item">Psicosociales y Ergonómicos</button>
-<div class="panel-acordeon">
-  <p>Incluyen estrés, fatiga y malas posturas.</p>
-  <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f">
+<button class="acordeon-item">Riesgos Psicosociales</button>
+<div class="panel">
+  <p>Estrés, carga mental o malas condiciones laborales.</p>
+  <img class="content-img" src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f">
 </div>
 
+<h2>Importancia de la Prevención</h2>
+
+<p>
+La prevención permite reducir accidentes y mejorar la productividad, creando entornos de trabajo más seguros.
+</p>
+
+<div class="footer">
+Proyecto seguridad laboral | 2026
+</div>
+
+</div>
 </div>
 
 <script>
@@ -213,20 +201,5 @@ for (var i = 0; i < acc.length; i++) {
 }
 </script>
 
-<h2>Conclusión</h2>
-
-<div class="card-bento">
-
-<div class="card-title">La prevención es una inversión, no un coste</div>
-
-<p>
-La prevención de riesgos laborales es un pilar fundamental para la sociedad.
-</p>
-
-<div class="cita-final">
-"Proteger la salud en el trabajo no es solo una opción."
-</div>
-
-</div>
-
-</div>
+</body>
+</html>
